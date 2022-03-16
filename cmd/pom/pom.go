@@ -72,6 +72,6 @@ func main() {
 		fmt.Println(err)
 	}
 
-	fmt.Println("4:" + fsm.Current())
+	fmt.Println("5:" + fsm.Current())
 
 }
