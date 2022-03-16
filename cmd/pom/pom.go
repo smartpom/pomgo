@@ -20,19 +20,19 @@ func main() {
 		},
 		fsm.Callbacks{
 			"challenger": func(e *fsm.Event) {
-				fmt.Println("challenger: " + e.FSM.Current())
+				fmt.Println("challenger: " + e.Src + "->" + e.FSM.Current())
 			},
 			"target": func(e *fsm.Event) {
-				fmt.Println("target: " + e.FSM.Current())
+				fmt.Println("target: " + e.Src + "->" + e.FSM.Current())
 			},
 			"challenge": func(e *fsm.Event) {
-				fmt.Println("challenge: " + e.FSM.Current())
+				fmt.Println("challenge: " + e.Src + "->" + e.FSM.Current())
 			},
 			"witness": func(e *fsm.Event) {
-				fmt.Println("witness: " + e.FSM.Current())
+				fmt.Println("witness: " + e.Src + "->" + e.FSM.Current())
 			},
 			"finish": func(e *fsm.Event) {
-				fmt.Println("finish: " + e.FSM.Current())
+				fmt.Println("finish: " + e.Src + "->" + e.FSM.Current())
 			},
 		},
 	)
