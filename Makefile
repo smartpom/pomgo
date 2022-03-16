@@ -25,9 +25,12 @@ ROOT_PKG := "github.com/smartpom/pomgo"
 
 default: clean build
 
-build: alternate data simple struct
+build: pom alternate data simple struct
 
 .PHONY: build
+
+pom:
+	$(GOBUILD) -ldflags "$(PackageFlags)" -o ./bin/pom -v ./cmd/pom
 
 alternate:
 	$(GOBUILD) -ldflags "$(PackageFlags)" -o ./bin/alternate -v ./cmd/alternate
